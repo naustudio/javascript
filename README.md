@@ -1,9 +1,6 @@
-# Airbnb JavaScript Style Guide() {
+# Nau JavaScript Style Guide() {
 
-*A mostly reasonable approach to JavaScript*
-
-[![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb.svg)](https://www.npmjs.com/package/eslint-config-airbnb)
-[![Downloads](https://img.shields.io/npm/dm/eslint-config-airbnb-base.svg)](https://www.npmjs.com/package/eslint-config-airbnb-base)
+*[Nau Studio](https://naustud.io) convention and a mostly reasonable approach to JavaScript.* Based on [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript)
 
 Other Style Guides
 
@@ -2034,22 +2031,31 @@ class Calculator extends Abacus {
 ## Whitespace
 
 <a name="whitespace--spaces"></a><a name="18.1"></a>
-- [18.1](#whitespace--spaces) Use soft tabs set to 2 spaces. eslint: [`indent`](http://eslint.org/docs/rules/indent.html)
+- [18.1](#whitespace--spaces) Use __tabs__ for _code indentation_ and __spaces__ for _alignment_ (tab width is up to author but 4 is preferred). eslint: [`indent`](http://eslint.org/docs/rules/indent.html), [`no-mixed-spaces-and-tabs`](http://eslint.org/docs/rules/no-mixed-spaces-and-tabs#smart-tabs)
 
 ```javascript
 // bad
 function foo() {
-∙∙∙∙const name;
+∙∙∙∙const name = 'bar',
+∙∙∙∙∙∙∙∙∙∙age = 21;
 }
 
 // bad
 function bar() {
-∙const name;
+∙∙const name = 'bar',
+∙∙∙∙∙∙∙∙age = 21;
 }
 
-// good
+// bad
+function bar() {
+→   const name = 'bar',
+→   →   age = 21;
+}
+
+// good (regardless of tab width setting, name & age are always aligned)
 function baz() {
-∙∙const name;
+→   const name = 'bar',
+→   ∙∙∙∙∙∙age = 21; // it's ok to mix spaces and tabs here
 }
 ```
 
@@ -3136,7 +3142,7 @@ This style guide is also available in other languages:
 
 ## Contributors
 
-- [View Contributors](https://github.com/airbnb/javascript/graphs/contributors)
+- [View Contributors](https://github.com/naustudio/javascript/graphs/contributors)
 
 **[⬆ back to top](#table-of-contents)**
 
