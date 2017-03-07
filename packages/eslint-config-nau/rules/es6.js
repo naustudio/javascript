@@ -19,7 +19,7 @@ module.exports = {
       requireReturnForObjectLiteral: false,
     }],
 
-    // parens in arrow function arguments are optional and as-needed, we don't enforce any rules here
+    // parens in arrow function arguments are optional and as-needed
     // http://eslint.org/docs/rules/arrow-parens
     'arrow-parens': 'off',
 
