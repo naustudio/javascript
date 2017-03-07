@@ -19,11 +19,9 @@ module.exports = {
       requireReturnForObjectLiteral: false,
     }],
 
-    // require parens in arrow function arguments
+    // parens in arrow function arguments are optional and as-needed, we don't enforce any rules here
     // http://eslint.org/docs/rules/arrow-parens
-    'arrow-parens': ['error', 'as-needed', {
-      requireForBlockBody: true,
-    }],
+    'arrow-parens': 'off',
 
     // require space before/after arrow function's arrow
     // http://eslint.org/docs/rules/arrow-spacing
@@ -106,6 +104,16 @@ module.exports = {
     'prefer-const': ['error', {
       destructuring: 'any',
       ignoreReadBeforeAssign: true,
+    }],
+
+    // Prefer destructuring from arrays and objects
+    // http://eslint.org/docs/rules/prefer-destructuring
+    // TODO: enable
+    'prefer-destructuring': ['off', {
+      array: true,
+      object: true,
+    }, {
+      enforceForRenamedProperties: false,
     }],
 
     // disallow parseInt() in favor of binary, octal, and hexadecimal literals

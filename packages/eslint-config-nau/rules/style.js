@@ -54,9 +54,9 @@ module.exports = {
       includeCommonJSModuleExports: false
     }],
 
-    // require function expressions to have a name
+    // (optional) require function expressions to have a name
     // http://eslint.org/docs/rules/func-names
-    'func-names': 'warn',
+    'func-names': 'off',
 
     // enforces use of function declarations or expressions
     // http://eslint.org/docs/rules/func-style
@@ -76,7 +76,7 @@ module.exports = {
 
     // this option sets a specific tab width for your code
     // http://eslint.org/docs/rules/indent
-    indent: ['error', 2, {
+    indent: ['error', 'tab', {
       SwitchCase: 1,
       VariableDeclarator: 1,
       outerIIFEBody: 1,
@@ -228,11 +228,15 @@ module.exports = {
       allowSamePrecedence: false
     }],
 
-    // disallow mixed spaces and tabs for indentation
-    'no-mixed-spaces-and-tabs': 'error',
+    // allows mixed spaces and tabs for indentation
+    'no-mixed-spaces-and-tabs': 'off',
+
+    // allows use of chained assignment expressions
+    // http://eslint.org/docs/rules/no-multi-assign
+    'no-multi-assign': 'off',
 
     // disallow multiple empty lines and only one newline at the end
-    'no-multiple-empty-lines': ['error', { max: 2, maxEOF: 1 }],
+    'no-multiple-empty-lines': ['error', { max: 3, maxEOF: 1 }],
 
     // disallow negated conditions
     // http://eslint.org/docs/rules/no-negated-condition
@@ -244,9 +248,9 @@ module.exports = {
     // disallow use of the Object constructor
     'no-new-object': 'error',
 
-    // disallow use of unary operators, ++ and --
+    // disallow use of unary operators, ++ and --, but allows in last expr of forloop
     // http://eslint.org/docs/rules/no-plusplus
-    'no-plusplus': 'error',
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
 
     // disallow certain syntax forms
     // http://eslint.org/docs/rules/no-restricted-syntax
@@ -262,7 +266,7 @@ module.exports = {
     'no-spaced-func': 'error',
 
     // disallow tab characters entirely
-    'no-tabs': 'error',
+    'no-tabs': 'off',
 
     // disallow the use of ternary operators
     'no-ternary': 'off',
@@ -281,6 +285,10 @@ module.exports = {
     // disallow whitespace before properties
     // http://eslint.org/docs/rules/no-whitespace-before-property
     'no-whitespace-before-property': 'error',
+
+    // enforce the location of single-line statements
+    // http://eslint.org/docs/rules/nonblock-statement-body-position
+    'nonblock-statement-body-position': 'off',
 
     // require padding inside curly braces
     'object-curly-spacing': ['error', 'always'],
@@ -313,8 +321,8 @@ module.exports = {
     // enforce operators to be placed before or after line breaks
     'operator-linebreak': 'off',
 
-    // enforce padding within blocks
-    'padded-blocks': ['error', 'never'],
+    // NOT enforce padding within blocks
+    'padded-blocks': ['off'],
 
     // require quotes around object literal property names
     // http://eslint.org/docs/rules/quote-props.html
@@ -345,7 +353,7 @@ module.exports = {
     // require or disallow space before function opening parenthesis
     // http://eslint.org/docs/rules/space-before-function-paren
     'space-before-function-paren': ['error', {
-      anonymous: 'always',
+      anonymous: 'never',
       named: 'never',
       asyncArrow: 'always'
     }],
@@ -378,6 +386,11 @@ module.exports = {
         balanced: false,
       }
     }],
+
+    // Require or disallow spacing between template tags and their literals
+    // http://eslint.org/docs/rules/template-tag-spacing
+    // TODO: enable, semver-major
+    'template-tag-spacing': ['off', 'never'],
 
     // require or disallow the Unicode Byte Order Mark
     // http://eslint.org/docs/rules/unicode-bom
