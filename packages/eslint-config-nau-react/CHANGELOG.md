@@ -1,3 +1,7 @@
+14.0.0 / 2017-03-07
+==================
+ - Convert to eslint-config-nau-react
+
 13.0.0 / 2016-11-06
 ==================
 - [breaking] Enable `import/no-webpack-loader-syntax` rule (#1123)

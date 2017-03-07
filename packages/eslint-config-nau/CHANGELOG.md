@@ -1,3 +1,7 @@
+12.0.0 / 2017-03-07
+==================
+ - Convert to eslint-config-nau
+
 11.0.0 / 2016-12-11
 ==================
  - [breaking] enable `no-await-in-loop`

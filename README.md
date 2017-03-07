@@ -262,16 +262,16 @@ const obj = {
 ```javascript
 // bad
 const bad = {
-'foo': 3,
-'bar': 4,
-'data-blah': 5,
+    'foo': 3,
+    'bar': 4,
+    'data-blah': 5,
 };
 
 // good
 const good = {
-foo: 3,
-bar: 4,
-'data-blah': 5,
+    foo: 3,
+    bar: 4,
+    'data-blah': 5,
 };
 ```
 
@@ -292,7 +292,7 @@ console.log(Object.prototype.hasOwnProperty.call(object, key));
 const has = Object.prototype.hasOwnProperty; // cache the lookup once, in module scope.
 /* or */
 import has from 'has';
-…
+
 console.log(has.call(object, key));
 ```
 
@@ -935,7 +935,7 @@ console.log(
 
   > Why? It shows clearly where the function starts and ends.
 
-```js
+```javascript
 // bad
 ['get', 'post', 'put'].map(httpMethod => Object.prototype.hasOwnProperty.call(
         httpMagicObjectWithAVeryLongName,
@@ -958,7 +958,7 @@ console.log(
 
   > Why? Less visual clutter.
 
-```js
+```javascript
 // bad
 [1, 2, 3].map((x) => x * x);
 
@@ -987,7 +987,7 @@ console.log(
 
 - [8.5](#arrows--confusing) Avoid confusing arrow function syntax (`=>`) with comparison operators (`<=`, `>=`). eslint: [`no-confusing-arrow`](http://eslint.org/docs/rules/no-confusing-arrow)
 
-```js
+```javascript
 // bad
 const itemHeight = item => item.height > 256 ? item.largeSize : item.smallSize;
 
@@ -1399,7 +1399,7 @@ const increasedByOne = numbers.map(num => num + 1);
 
   > Why? `function` and `*` are part of the same conceptual keyword - `*` is not a modifier for `function`, `function*` is a unique construct, different from `function`.
 
-```js
+```javascript
 // bad
 function * foo() {
 }
@@ -1503,14 +1503,14 @@ const superPower = new SuperPower();
 ```javascript
 // bad
 const items = getItems(),
-        goSportsTeam = true,
-        dragonball = 'z';
+      goSportsTeam = true,
+      dragonball = 'z';
 
 // bad
 // (compare to above, and try to spot the mistake)
 const items = getItems(),
-        goSportsTeam = true;
-        dragonball = 'z';
+      goSportsTeam = true;
+      dragonball = 'z';
 
 // good
 const items = getItems();
@@ -1527,8 +1527,8 @@ const dragonball = 'z';
 ```javascript
 // bad
 let i, len, dragonball,
-        items = getItems(),
-        goSportsTeam = true;
+    items = getItems(),
+    goSportsTeam = true;
 
 // bad
 let i;
