@@ -1,3 +1,8 @@
+13.0.0 / 2017-06-26
+==================
+ - Upgrade eslint@4.1.1; eslint-plugin-import@2.6.0
+ - Add new rules from eslint 4.0 and eslint-plugin-import 2.6
+
 12.0.0 / 2017-03-07
 ==================
  - Convert to eslint-config-nau

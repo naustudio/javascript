@@ -3,6 +3,12 @@ module.exports = {
     // enforce spacing inside array brackets
     'array-bracket-spacing': ['error', 'never'],
 
+    // OFF enforce line breaks after opening and before closing array brackets
+    'array-bracket-newline': 'off',
+
+    // OFF enforce line breaks between array elements
+    'array-element-newline': 'off',
+
     // enforce spacing inside single-line blocks
     // http://eslint.org/docs/rules/block-spacing
     'block-spacing': ['error', 'always'],
@@ -324,6 +330,15 @@ module.exports = {
     // NOT enforce padding within blocks
     'padded-blocks': ['off'],
 
+    // Require or disallow padding lines between statements
+    // TODO: add unit tests
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: '*', next: ['return', 'function', 'class', 'cjs-export', 'export'] },
+      { blankLine: 'always', prev: ['import', 'cjs-import'], next: '*' },
+      { blankLine: 'any', prev: ['import', 'cjs-import'], next: ['import', 'cjs-import'] },
+    ],
+
     // require quotes around object literal property names
     // http://eslint.org/docs/rules/quote-props.html
     'quote-props': ['error', 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
@@ -340,6 +355,9 @@ module.exports = {
 
     // enforce spacing before and after semicolons
     'semi-spacing': ['error', { before: false, after: true }],
+
+    // Enforce location of semicolons
+    'semi-style': ['error', 'last'],
 
     // requires object keys to be sorted
     'sort-keys': ['off', 'asc', { caseSensitive: false, natural: true }],
@@ -386,6 +404,12 @@ module.exports = {
         balanced: false,
       }
     }],
+
+    // Enforce spacing around colons of switch statements
+    'switch-colon-spacing': [
+      'error',
+      { after: true, before: false }
+    ],
 
     // Require or disallow spacing between template tags and their literals
     // http://eslint.org/docs/rules/template-tag-spacing
