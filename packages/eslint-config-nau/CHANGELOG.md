@@ -1,3 +1,7 @@
+13.1.0 / 2017-06-26
+==================
+ - Turn off: `max-len`, `no-underscore-dangle`, `spaced-comment` (these rules are rather annoyed than helpful)
+
 13.0.0 / 2017-06-26
 ==================
  - Upgrade eslint@4.1.1; eslint-plugin-import@2.6.0

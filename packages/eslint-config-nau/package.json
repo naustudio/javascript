@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nau",
-  "version": "13.0.0",
+  "version": "13.1.0",
   "description": "Nau Studio base JS ESLint config, derived from eslint-config-airbnb-base",
   "main": "index.js",
   "scripts": {
@@ -47,9 +47,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/airbnb/javascript/issues"
+    "url": "https://github.com/naustudio/javascript/issues"
   },
-  "homepage": "https://github.com/airbnb/javascript",
+  "homepage": "https://github.com/naustudio/javascript",
   "devDependencies": {
     "babel-preset-airbnb": "^2.3.3",
     "babel-tape-runner": "^2.0.1",

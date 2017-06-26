@@ -146,7 +146,7 @@ module.exports = {
 
     // specify the maximum length of a line in your program
     // http://eslint.org/docs/rules/max-len
-    'max-len': ['error', 100, 2, {
+    'max-len': ['off', 100, 2, {
       ignoreUrls: true,
       ignoreComments: false,
       ignoreRegExpLiterals: true,
@@ -281,7 +281,7 @@ module.exports = {
     'no-trailing-spaces': 'error',
 
     // disallow dangling underscores in identifiers
-    'no-underscore-dangle': ['error', { allowAfterThis: false }],
+    'no-underscore-dangle': ['off', { allowAfterThis: false }],
 
     // disallow the use of Boolean literals in conditional expressions
     // also, prefer `a || b` over `a ? a : b`
@@ -393,7 +393,7 @@ module.exports = {
 
     // require or disallow a space immediately following the // or /* in a comment
     // http://eslint.org/docs/rules/spaced-comment
-    'spaced-comment': ['error', 'always', {
+    'spaced-comment': ['off', 'always', {
       line: {
         exceptions: ['-', '+'],
         markers: ['=', '!'], // space here to support sprockets directives
