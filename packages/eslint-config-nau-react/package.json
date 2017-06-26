@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nau-react",
-  "version": "14.0.1",
+  "version": "15.0.0",
   "description": "Nau Studio ESLint config using React, derived from eslint-config-airbnb",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,10 @@
   "author": "Jake Teton-Landis (https://twitter.com/@jitl)",
   "contributors": [
     {
+      "name": "Thanh Tran",
+      "url": "https://twitter.com/trongthanh"
+    },
+    {
       "name": "Jake Teton-Landis",
       "url": "https://twitter.com/jitl"
     },
@@ -43,31 +47,31 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/airbnb/javascript/issues"
+    "url": "https://github.com/naustudio/javascript/issues"
   },
-  "homepage": "https://github.com/airbnb/javascript",
+  "homepage": "https://github.com/naustudio/javascript",
   "dependencies": {
-    "eslint-config-nau": "^12.0.0"
+    "eslint-config-nau": "^13.1.0"
   },
   "devDependencies": {
-    "babel-preset-airbnb": "^2.1.1",
+    "babel-preset-airbnb": "^2.3.3",
     "babel-tape-runner": "^2.0.1",
     "editorconfig-tools": "^0.1.1",
-    "eslint": "^3.12.1",
-    "eslint-find-rules": "^1.14.3",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.8.0",
+    "eslint": "^4.1.1",
+    "eslint-find-rules": "^3.1.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.1.0",
     "in-publish": "^2.0.0",
     "react": ">= 0.13.0",
     "safe-publish-latest": "^1.1.1",
     "tape": "^4.6.3"
   },
   "peerDependencies": {
-    "eslint": "^3.17.1",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.0"
+    "eslint": ">=4.0.0",
+    "eslint-plugin-import": ">=2.6.0",
+    "eslint-plugin-jsx-a11y": ">=5.0.0",
+    "eslint-plugin-react": ">=7.0.0"
   },
   "engines": {
     "node": ">= 4"

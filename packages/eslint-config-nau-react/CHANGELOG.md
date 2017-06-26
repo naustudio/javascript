@@ -1,3 +1,8 @@
+15.0.0 / 2017-06-26
+==================
+ - Upgrade eslint-config-nau 13.1, eslint 4.0, eslint-plugin-import 2.6 and other to latest
+ - Relax `react/require-default-props` to `warn`.
+
 14.0.0 / 2017-03-07
 ==================
  - Convert to eslint-config-nau-react

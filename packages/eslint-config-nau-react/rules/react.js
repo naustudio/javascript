@@ -7,9 +7,6 @@ module.exports = {
       jsx: true,
     },
   },
-  ecmaFeatures: {
-    jsx: true,
-  },
 
   // View link below for react rules documentation
   // https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
@@ -20,6 +17,10 @@ module.exports = {
 
     // it doesn't harm for class methods not using this
     'class-methods-use-this': 'off',
+
+    // Enforce all defaultProps have a corresponding non-required PropType
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/default-props-match-prop-types.md
+    'react/default-props-match-prop-types': 'error',
 
     // Prevent missing displayName in a React component definition
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
@@ -36,6 +37,10 @@ module.exports = {
     // Validate closing bracket location in JSX
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md
     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
+
+    // Validate closing tag location in JSX
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-tag-location.md
+    'react/jsx-closing-tag-location': 'error',
 
     // Enforce or disallow spaces inside of curly braces in JSX attributes
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md
@@ -238,6 +243,10 @@ module.exports = {
     'react/jsx-no-comment-textnodes': 'error',
     'react/no-comment-textnodes': 'off', // deprecated version
 
+    // Prevent usage of shouldComponentUpdate when extending React.PureComponent
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-redundant-should-component-update.md
+    'react/no-redundant-should-component-update': 'error',
+
     // disallow using React.render/ReactDOM.render's return value
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
     'react/no-render-return-value': 'error',
@@ -292,7 +301,7 @@ module.exports = {
 
     // Enforce a defaultProps definition for every prop that is not a required prop
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-default-props.md
-    'react/require-default-props': 'error',
+    'react/require-default-props': 'warn',
 
     'react/forbid-elements': ['off', {
       forbid: [
@@ -307,6 +316,10 @@ module.exports = {
     // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
     // TODO: enable (semver-minor)
     'react/void-dom-elements-no-children': 'off',
+
+    // Prevent usage of setState in componentWillUpdate
+    'react/no-will-update-set-state': 'warn',
+
   },
 
   settings: {
