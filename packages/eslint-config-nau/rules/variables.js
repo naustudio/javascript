@@ -16,8 +16,8 @@ module.exports = {
     // disallow specific globals
     'no-restricted-globals': 'off',
 
-    // disallow declaration of variables already declared in the outer scope
-    'no-shadow': 'error',
+    // allow declaration of variables already declared in the outer scope
+    'no-shadow': 'off',
 
     // disallow shadowing of names such as arguments
     'no-shadow-restricted-names': 'error',
@@ -38,5 +38,5 @@ module.exports = {
 
     // disallow use of variables before they are defined
     'no-use-before-define': ['error', { functions: true, classes: true, variables: true }],
-  }
+  },
 };
