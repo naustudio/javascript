@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nau",
-  "version": "13.2.0",
+  "version": "14.0.0",
   "description": "Nau Studio base JS ESLint config, derived from eslint-config-airbnb-base",
   "main": "index.js",
   "scripts": {

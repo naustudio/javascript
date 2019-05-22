@@ -6,7 +6,7 @@ module.exports = {
       objects: 'always-multiline',
       imports: 'always-multiline',
       exports: 'always-multiline',
-      functions: 'always-multiline',
+      functions: 'ignore',
     }],
 
     // Enforce “for” loop update clause moving the counter in the right direction.

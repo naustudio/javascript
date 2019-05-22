@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-nau-react",
-  "version": "16.0.0",
+  "version": "17.0.0",
   "description": "Nau Studio ESLint config using React, derived from eslint-config-airbnb",
   "main": "index.js",
   "scripts": {
