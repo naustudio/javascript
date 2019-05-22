@@ -372,7 +372,7 @@ module.exports = {
       { blankLine: 'always', prev: '*', next: ['function', 'class', 'cjs-export', 'export'] },
       { blankLine: 'always', prev: ['import', 'cjs-import'], next: '*' },
       { blankLine: 'any', prev: ['import', 'cjs-import'], next: ['import', 'cjs-import'] },
-      { blankLine: 'any', prev: ['export', 'cjs-export',], next: ['export', 'cjs-export',] },
+      { blankLine: 'any', prev: ['export', 'cjs-export'], next: ['export', 'cjs-export'] },
     ],
 
     // require quotes around object literal property names
